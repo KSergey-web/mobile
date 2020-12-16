@@ -8,6 +8,9 @@ import android.util.Log;
 
 import androidx.annotation.Nullable;
 
+import com.example.mobilepo.OpenLinkActivity;
+import com.example.mobilepo.viewmodel.OpenLinkVM;
+
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
@@ -29,8 +32,8 @@ public class MyService extends Service {
     }
 
     public int onStartCommand(Intent intent, int flags, int startId) {
-    //    PendingIntent pendingIntent = intent.getParcelableExtra(MainActivity3.PENDING_INTENT_KEY);
-      //  timer = new Timer(pendingIntent);
+        PendingIntent pendingIntent = intent.getParcelableExtra(OpenLinkActivity.PENDING_INTENT_KEY);
+        timer = new Timer(pendingIntent);
         es.execute(timer);
         return super.onStartCommand(intent, flags, startId);
     }
@@ -59,8 +62,8 @@ public class MyService extends Service {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-             //   sendActivity(new Intent().putExtra(MainActivity3.COUNTER_ANSWER_KEY, i),
-               //         MainActivity3.COUNTER_ANSWER);
+               sendActivity(new Intent().putExtra(OpenLinkActivity.TIMER_ANSWER_KEY, i),
+                       OpenLinkActivity.TIMER_ANSWER);
             }
         }
 

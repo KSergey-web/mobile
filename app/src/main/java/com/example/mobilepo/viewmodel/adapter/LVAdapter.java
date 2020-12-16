@@ -52,7 +52,7 @@ public class LVAdapter extends BaseAdapter {
         final TextView num2 =(TextView) view.findViewById(R.id.item_number2);
         num2.setText(ex.getNumber2());
         final TextView oper =(TextView) view.findViewById(R.id.item_operation);
-        oper.setText(ex.getNumber2());
+        oper.setText(ex.getOperation());
         final TextView res =(TextView) view.findViewById(R.id.item_result);
         res.setText(ex.getResult());
         return  view;

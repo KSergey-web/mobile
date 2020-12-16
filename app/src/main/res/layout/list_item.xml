@@ -16,28 +16,29 @@
                 android:id="@+id/item_number1"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
                 android:text="@{vm.number1}" />
 
             <TextView
                 android:id="@+id/item_operation"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
                 android:text="@{vm.operation}" />
 
             <TextView
                 android:id="@+id/item_number2"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
-                android:layout_weight="3"
                 android:text="@{vm.number2}" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="=" />
 
             <TextView
                 android:id="@+id/item_result"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="4"
+                android:layout_height="match_parent"
                 android:text="@{vm.result}" />
         </LinearLayout>
 

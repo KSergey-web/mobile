@@ -35,8 +35,8 @@ public class Sumfragment extends Fragment {
                              Bundle savedInstanceState) {
         FragmentSumfragmentBinding fragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_sumfragment, null, false);
         View view = fragmentBinding.getRoot();
-        //vm = new MainActivityVM(getActivity(), new Expression(), getActivity().getPreferences(Context.MODE_PRIVATE));
-        //vm.loadData("1");
+        vm = new MainActivityVM(getActivity(), new Expression(), getActivity().getPreferences(Context.MODE_PRIVATE));
+        vm.loadData("1");
         fragmentBinding.setVm(vm);
         inflater.inflate(R.layout.fragment_sumfragment,container, false);
         return view;

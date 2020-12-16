@@ -75,4 +75,14 @@ public class Repository {
     }
 
     public void removeAllNotes(){  db.Dao().deleteAllNotes(); }
+
+    public void saveTotalCount(String s){
+        Log.d("COUNT_TEST_SAVI", s);
+        txtFile.write(s);
+    }
+
+    public String getTotalCount(){
+        Log.d("COUNT_TEST_SAVI2", "f");
+        return txtFile.read();
+    }
 }

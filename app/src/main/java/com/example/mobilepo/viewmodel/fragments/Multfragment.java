@@ -13,6 +13,7 @@ import android.view.ViewGroup;
 
 import com.example.mobilepo.MainActivity;
 import com.example.mobilepo.R;
+import com.example.mobilepo.databinding.FragmentMultfragmentBinding;
 import com.example.mobilepo.databinding.FragmentSumfragmentBinding;
 import com.example.mobilepo.model.Expression;
 import com.example.mobilepo.viewmodel.MainActivityVM;
@@ -38,10 +39,10 @@ public class Multfragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        FragmentSumfragmentBinding fragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_multfragment, null, false);
+        FragmentMultfragmentBinding fragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_multfragment, null, false);
         View view = fragmentBinding.getRoot();
-        //vm = new MainActivityVM(getActivity(), new Expression(), getActivity().getPreferences(Context.MODE_PRIVATE));
-        //vm.loadData("1");
+        vm = new MainActivityVM(getActivity(), new Expression(), getActivity().getPreferences(Context.MODE_PRIVATE));
+        vm.loadData("1");
         fragmentBinding.setVm(vm);
         inflater.inflate(R.layout.fragment_multfragment,container, false);
         return view;

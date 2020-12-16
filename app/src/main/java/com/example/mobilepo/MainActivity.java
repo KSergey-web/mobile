@@ -17,30 +17,32 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        //MenuInflater inflater = getMenuInflater();
-       // inflater.inflate(R.menu.dropdown_menu, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.menu_main, menu);
         return  true;
-    }*/
-
-    /*@Override
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        Intent intent;
-        switch (item.getItemId()){
-            case R.id.item1:
-                intent = new Intent(this, MainActivity2.class);
-                startActivity(intent);
-                break;
-            case R.id.item2:
-                intent = new Intent(this, MainActivity3.class);
-                startActivity(intent);
-                break;
-            case R.id.open_anim:
-                startActivity(new Intent(this, AnimActivity.class));
-        }
-        return super.onOptionsItemSelected(item);
     }
-     */
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        Intent intent;
+        switch (item.getItemId()) {
+            /*case R.id.action_timer:
+                intent = new Intent(this, ActivityTimer.class);
+                startActivity(intent);
+                return true;*/
+            case R.id.action_open_link:
+                intent = new Intent(this, OpenLinkActivity.class);
+                startActivity(intent);
+                return true;
+            case R.id.action_list:
+                intent = new Intent(this, ListActivity.class);
+                startActivity(intent);
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
 
 }

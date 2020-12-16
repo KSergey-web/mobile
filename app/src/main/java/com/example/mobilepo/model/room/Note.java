@@ -41,7 +41,7 @@ public class Note {
     }
 
     public String getNumber2()  {
-        return number1;
+        return number2;
     }
 
     public String getOperation()  {

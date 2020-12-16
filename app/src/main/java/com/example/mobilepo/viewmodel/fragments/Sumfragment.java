@@ -33,13 +33,13 @@ public class Sumfragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        FragmentSumfragmentBinding fragment1Binding = DataBindingUtil.inflate(inflater, R.layout.fragment_sumfragment, null, false);
-        View view = fragment1Binding.getRoot();
-        vm = new MainActivityVM(getActivity(), new Expression(), getActivity().getPreferences(Context.MODE_PRIVATE));
-        vm.loadData("1");
-        fragment1Binding.setVm(vm);
+        FragmentSumfragmentBinding fragmentBinding = DataBindingUtil.inflate(inflater, R.layout.fragment_sumfragment, null, false);
+        View view = fragmentBinding.getRoot();
+        //vm = new MainActivityVM(getActivity(), new Expression(), getActivity().getPreferences(Context.MODE_PRIVATE));
+        //vm.loadData("1");
+        fragmentBinding.setVm(vm);
         inflater.inflate(R.layout.fragment_sumfragment,container, false);
-        return view; //fragment1Binding.getRoot()
+        return view;
     }
 
     @Override

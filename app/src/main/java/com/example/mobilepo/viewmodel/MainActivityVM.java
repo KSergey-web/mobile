@@ -13,6 +13,7 @@ import com.example.mobilepo.BR;
 import com.example.mobilepo.model.Expression;
 import com.example.mobilepo.model.Repository;
 import com.example.mobilepo.model.services.Operations;
+import com.example.mobilepo.R;
 
 import java.util.ArrayList;
 
@@ -22,6 +23,9 @@ public class MainActivityVM extends BaseObservable {
 
     @Bindable
     public MutableLiveData<String> number2 = new MutableLiveData<>();
+
+    @Bindable
+    public MutableLiveData<String> operation = new MutableLiveData<>();
 
     @Bindable
     public MutableLiveData<String> result = new MutableLiveData();
@@ -36,8 +40,8 @@ public class MainActivityVM extends BaseObservable {
         repo = new Repository(ctx);
     }
 
-    public MainActivityVM(Context context, Expression lab1, SharedPreferences sp) {
-        this.ex = lab1;
+    public MainActivityVM(Context context, Expression expression, SharedPreferences sp) {
+        this.ex = expression;
         this.ctx = context;
         this.preferences = sp;
         repo = new Repository(context);

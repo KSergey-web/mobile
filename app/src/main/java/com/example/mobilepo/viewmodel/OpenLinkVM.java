@@ -37,7 +37,7 @@ public class OpenLinkVM extends BaseObservable {
     }
 
     public void saveTimer(String str) {
-        repo.saveTotalCount(str);
+        repo.saveTimer(str);
     }
 
     public void onStartTimer() {

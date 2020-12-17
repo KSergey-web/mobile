@@ -39,12 +39,16 @@ public class OpenLinkVM extends BaseObservable {
     public void saveTimer(String str) {
         repo.saveTimer(str);
     }
+    public String getTimer() {
+        return repo.getTimer();
+    }
+
 
     public void onStartTimer() {
-        ((OpenLinkActivity)ctx).startService();
+        ((OpenLinkActivity)ctx).startmyService();
     }
 
     public void onStopTimer() {
-        ((OpenLinkActivity)ctx).stopService();
+        ((OpenLinkActivity)ctx).stopmyService();
     }
 }

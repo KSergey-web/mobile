@@ -13,6 +13,7 @@ import com.example.mobilepo.viewmodel.OpenLinkVM;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
 public class MyService extends Service {
     public MyService() {
@@ -56,15 +57,18 @@ public class MyService extends Service {
         }
 
         public void run() {
-            for(int i = 0; i < 10000 && !stop; ++i){
+            int i;
+            for(i = 0; i < 100 && !stop; ++i){
                 try {
-                    Thread.sleep( 1000);
+                    TimeUnit.SECONDS.sleep(1);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-               sendActivity(new Intent().putExtra(OpenLinkActivity.TIMER_ANSWER_KEY, i),
-                       OpenLinkActivity.TIMER_ANSWER);
+                sendActivity(new Intent().putExtra(OpenLinkActivity.TIMER_ANSWER_KEY, i),
+                        OpenLinkActivity.TIMER_ANSWER);
             }
+            sendActivity(new Intent().putExtra(OpenLinkActivity.TIMER_ANSWER_KEY, i),
+                    OpenLinkActivity.TIMER_FINISH);
         }
 
         void stop() {

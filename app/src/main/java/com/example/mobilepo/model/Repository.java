@@ -75,12 +75,10 @@ public class Repository {
     public void removeAllNotes(){  db.Dao().deleteAllNotes(); }
 
     public void saveTimer(String s){
-        Log.e("COUNT_TEST_SAVI", s);
         txtFile.write(s);
     }
 
     public String getTimer(){
-        Log.e("COUNT_TEST_SAVI2", "f");
         return txtFile.read();
     }
 }

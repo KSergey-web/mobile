@@ -43,14 +43,14 @@ public class OpenLinkActivity extends AppCompatActivity {
     }
 
 
-    public void startService(){
+    public void startmyService(){
         PendingIntent pendingIntent = createPendingResult(TIMER_SERVICE, new Intent(), 0);
         Intent intent = new Intent(this, MyService.class);
         intent.putExtra(PENDING_INTENT_KEY, pendingIntent);
         startService(intent);
     }
 
-    public void stopService(){
+    public void stopmyService(){
         Intent intent = new Intent(this, MyService.class);
         stopService(intent);
     }
@@ -58,13 +58,16 @@ public class OpenLinkActivity extends AppCompatActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         if (requestCode == TIMER_SERVICE) {
-            int counter = data.getIntExtra(TIMER_ANSWER_KEY, 0);
+            int timer = data.getIntExtra(TIMER_ANSWER_KEY, 0);
             switch (resultCode) {
                 case TIMER_ANSWER:
-                    Toast.makeText(this, String.valueOf(counter), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(this, String.valueOf(timer), Toast.LENGTH_SHORT).show();
                     break;
                 case TIMER_FINISH:
-                    openLinkVM.saveTimer(String.valueOf(counter));
+                    openLinkVM.saveTimer(String.valueOf(timer));
+                    String res = openLinkVM.getTimer();
+                    res = "Result from file "+res;
+                    Toast.makeText(this, res, Toast.LENGTH_LONG).show();
                     break;
             }
         }

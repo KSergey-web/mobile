@@ -10,6 +10,7 @@
     <string name="text_button_start">Старт</string>
     <string name="text_button_stop">Стоп</string>
     <string name="list">Список</string>
+    <string name="timer">Таймер</string>
     <string name="app_name">MobilePO</string>
     <string name="change_frag">Менять фрагменты</string>
     <string name="btn_text_anim_rotate">Rotate</string>

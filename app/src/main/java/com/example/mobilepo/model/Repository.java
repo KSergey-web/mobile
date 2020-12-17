@@ -58,7 +58,6 @@ public class Repository {
         SharedPreferences.Editor editor = sp.edit();
         editor.putString("number1" + postfix, ex.getNumber1());
         editor.putString("number2" + postfix, ex.getNumber2());
-        editor.putString("operation" + postfix, ex.getOperation());
         editor.putString("result" + postfix, ex.getResult());
         editor.commit();
     }
@@ -68,7 +67,6 @@ public class Repository {
         Expression ex = new Expression(
                 sp.getString("number1" + postfix, ""),
                 sp.getString("number2" + postfix, ""),
-                sp.getString("operation" + postfix, ""),
                 sp.getString("result" + postfix, "")
         );
         return  ex;
@@ -76,13 +74,13 @@ public class Repository {
 
     public void removeAllNotes(){  db.Dao().deleteAllNotes(); }
 
-    public void saveTotalCount(String s){
-        Log.d("COUNT_TEST_SAVI", s);
+    public void saveTimer(String s){
+        Log.e("COUNT_TEST_SAVI", s);
         txtFile.write(s);
     }
 
-    public String getTotalCount(){
-        Log.d("COUNT_TEST_SAVI2", "f");
+    public String getTimer(){
+        Log.e("COUNT_TEST_SAVI2", "f");
         return txtFile.read();
     }
 }

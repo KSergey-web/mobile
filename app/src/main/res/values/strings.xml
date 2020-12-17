@@ -10,6 +10,7 @@
     <string name="text_button_start">Start</string>
     <string name="text_button_stop">Stop</string>
     <string name="list">List</string>
+    <string name="timer">Timer</string>
     <string name="app_name">MobilePO</string>
     <string name="change_frag">Change Fragment</string>
     <string name="btn_text_anim_rotate">Rotate</string>

@@ -43,8 +43,8 @@ public class Sumfragment extends Fragment {
     }
 
     @Override
-    public void onPause() {
+    public void  onDestroy() {
         vm.saveData("2");
-        super.onPause();
+        super.onDestroy();
     }
 }

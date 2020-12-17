@@ -49,8 +49,8 @@ public class Multfragment extends Fragment {
     }
 
     @Override
-    public void onPause() {
+    public void  onDestroy() {
         vm.saveData("1");
-        super.onPause();
+        super.onDestroy();
     }
 }

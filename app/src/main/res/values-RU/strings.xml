@@ -12,6 +12,11 @@
     <string name="list">Список</string>
     <string name="app_name">MobilePO</string>
     <string name="change_frag">Менять фрагменты</string>
+    <string name="btn_text_anim_rotate">Rotate</string>
+    <string name="btn_text_anim_scale">Scale</string>
+    <string name="btn_text_anim_tarnsfer">Transfer</string>
+    <string name="btn_text_anim_transpar">Transparency</string>
+    <string name="text_anim">Анимация</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -40,6 +40,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, ListActivity.class);
                 startActivity(intent);
                 return true;
+            case R.id.action_anim:
+                intent = new Intent(this, AnimationActivity.class);
+                startActivity(intent);
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }

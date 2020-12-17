@@ -13,4 +13,8 @@
         android:title="@string/list"
         android:orderInCategory="3"
         app:showAsAction="never" />
+    <item android:id="@+id/action_anim"
+        android:title="@string/text_anim"
+        android:orderInCategory="3"
+        app:showAsAction="never" />
 </menu>

@@ -28,10 +28,10 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent intent;
         switch (item.getItemId()) {
-            /*case R.id.action_timer:
-                intent = new Intent(this, ActivityTimer.class);
+            case R.id.action_change_frag:
+                intent = new Intent(this, ChangeFragmentsActivity.class);
                 startActivity(intent);
-                return true;*/
+                return true;
             case R.id.action_open_link:
                 intent = new Intent(this, OpenLinkActivity.class);
                 startActivity(intent);

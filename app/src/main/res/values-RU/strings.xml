@@ -1,0 +1,17 @@
+<resources>
+    <string name="text_button_sum">Суммировать</string>
+    <string name="text_button_mult">Умножить</string>
+    <string name="text_for_num1">число 1</string>
+    <string name="text_for_num2">число 2</string>
+    <string name="text_result">Результат</string>
+    <string name="hint_value">Значение</string>
+    <string name="text_open_link">Открыть ссылку</string>
+    <string name="value_result">Результат: </string>
+    <string name="text_button_start">Старт</string>
+    <string name="text_button_stop">Стоп</string>
+    <string name="list">Список</string>
+    <string name="app_name">MobilePO</string>
+    <string name="change_frag">Менять фрагменты</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
